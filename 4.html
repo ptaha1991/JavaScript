@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+  <script>
+    "use strict";
+
+    console.log(addition(2, 6));
+    console.log(subtraction(2, 6));
+    console.log(subtraction(6, 2));
+    console.log(multiplication(6, 2));
+    console.log(division(6, 2));
+
+    /**
+     * Вычисляет сумму двух чисел
+     * @param {number} a - Первое число
+     * @param {number} b - Второе число
+     * @return {number} - Сумма чисел
+     */
+    function addition(a, b) {
+      return a + b;
+    }
+
+    /**
+     * Вычисляет разность двух чисел
+     * @param {number} a - Первое число
+     * @param {number} b - Второе число
+     * @return {number} - Разность чисел
+     */
+    function subtraction(a, b) {
+      if (a > b) {
+        return a - b;
+      }
+      return b - a;
+    }
+
+    /**
+     * Вычисляет произведение двух чисел
+     * @param {number} a - Первое число
+     * @param {number} b - Второе число
+     * @return {number} - Произведение чисел
+     */
+    function multiplication(a, b) {
+      return a * b;
+    }
+
+    /**
+     * Вычисляет частное двух чисел
+     * @param {number} a - Первое число
+     * @param {number} b - Второе число
+     * @return {number} - Частное чисел
+     */
+    function division(a, b) {
+      return a / b;
+    }
+
+  </script>
+</body>
+
+</html>
